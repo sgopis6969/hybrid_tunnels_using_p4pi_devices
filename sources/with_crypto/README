@@ -1,3 +1,9 @@
+t4p4-switch
+===========
+
+The P4Pi setting. Edit /root/t4p4s-switch to contain only a single line as follows.
+tunnel1
+
 tunnel1.p4
 ==========
 Source program for the switch BMV2 .
@@ -61,3 +67,7 @@ The binaries are available under target/release/enc for encryption and according
 for the decryption. This binaries caan be directly executed.
 
 All Rust files are common for all P4Pi devices. 
+keys.txt
+========
+As we use symmetric key encryption, the keys are shared. The file keys.txt should 
+be copied into /root directory.

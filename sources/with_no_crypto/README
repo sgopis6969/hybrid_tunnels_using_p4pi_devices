@@ -1,3 +1,9 @@
+t4p4-switch
+===========
+
+The P4Pi setting. Edit /root/t4p4s-switch to contain only a single line as follows.
+tunnel1
+
 tunnel1.p4
 ==========
 Source program for the switch BMV2 .
@@ -26,7 +32,7 @@ setup1_test
 ===========
 The file contains shell commands to initialize Linux briges
 and other relevant settings. These commands are specific for each P4Pi.
-Modify interface name of USB-Ethernet port accordingly. 
+Modify interface name of USB-Ethernet port accordingly.
 setup1_test_p4pi1 and setup1_test_p4pi2 are respective setup1_test 
 scripts for p4pi1 and p4pi2 devices.
 
@@ -45,6 +51,4 @@ csrc.sh
 =======
 A helping, one shot script, that  copies source files to relevant directories and 
 do things as needed.
-
-
 
