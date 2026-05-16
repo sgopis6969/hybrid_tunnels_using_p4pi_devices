@@ -1,0 +1,9 @@
+[package]
+name = "enc"
+version = "0.1.0"
+edition = "2024"
+
+[dependencies]
+openssl = {version = "0.10.79", features =["vendored"] }
+openssl-src = "300"
+pnet = "0.35.0"

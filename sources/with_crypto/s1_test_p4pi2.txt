@@ -1,0 +1,4 @@
+table_add payload_encap_table payload_encap 0 192.168.200.0/24  => 0x0001 
+table_add transport_encap_table transport_encap 0x0001 => 30:00:00:00:10:01  10:00:00:00:10:01  192.168.255.2 192.168.255.1 2
+table_add transport_decap_table transport_decap 0x0001 => 0
+table_add transport_out_table transport_out 0x0001 => 1

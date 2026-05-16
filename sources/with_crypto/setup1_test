@@ -1,0 +1,29 @@
+#!/bin/bash
+ip link set eth0 netns gigport
+ip netns exec gigport ip link set eth0 master br1
+ip netns exec gigport ip link set eth0 up
+ip netns exec gigport ethtool -s eth0 speed 1000 duplex full
+ip add add 192.168.255.2/24 dev veth1
+
+ip link set enx00eebcdb132b master br0
+ethtool -s  enx00eebcdb132b speed 100 duplex full
+ip link set enx00eebcdb132b up
+
+
+ip link add br2 type bridge
+
+ip link add veth5 type veth peer name veth5-1
+#ip link set veth5-1 master br2
+ip link set veth5-1 up
+
+ip link add veth6 type veth peer name veth6-1
+ip link set veth6 up
+ip link set veth6-1 up
+
+ip link set veth0-1 master br2
+ip link set br2 up
+ip link set veth0-1 up
+
+ip link set enx00eebcdb132b master br2
+ip link set enx00eebcdb132b up
+

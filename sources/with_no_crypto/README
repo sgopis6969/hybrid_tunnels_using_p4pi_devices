@@ -1,0 +1,50 @@
+tunnel1.p4
+==========
+Source program for the switch BMV2 .
+This to be copied in the directory /root/bmv2/examples/tunnel1
+This file is same for both the P4Pis and infact same in all 
+P4Pis in case of multi node implementation.
+
+p4edge-setup
+============
+This file is modified version of the file
+/usr/sbin/p4edge-setup
+This file is same for both the P4Pis and infact same in all 
+P4Pis in case of multi node implementation.
+
+After the reboot of the P4Pi, the following scripts are to be 
+execute to reach our test setup,
+
+bmv2-start
+==========
+This is modified script that are executed by the bmv2.service.
+During development, we modified to include logs and removed those
+changes later. In crypto settings, the script is modified to include 
+additional ports.
+
+setup1_test
+===========
+The file contains shell commands to initialize Linux briges
+and other relevant settings. These commands are specific for each P4Pi.
+Modify interface name of USB-Ethernet port accordingly. 
+setup1_test_p4pi1 and setup1_test_p4pi2 are respective setup1_test 
+scripts for p4pi1 and p4pi2 devices.
+
+s1_test.txt
+===========
+The file contains data to load the Match-Action tables of the ingress 
+pipeline. These are specific for the P4Pi. To be modified accordingly.
+The file s1_test_p4pi1.txt is specific for P4Pi1 of our test setup.
+The file s1_test_p4pi2.txt is specific for P4Pi1 of our test setup.
+
+cp.sh
+=====
+A helping script to pupulate Match-Action tables in one shot. Modify as required.
+
+csrc.sh
+=======
+A helping, one shot script, that  copies source files to relevant directories and 
+do things as needed.
+
+
+
